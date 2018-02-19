@@ -8,7 +8,18 @@ RUN mkdir /hanzo-python
 WORKDIR /hanzo-python
 
 # Copy shit over to the docker container to be run
-COPY . /hanzo-python
+# COPY . /hanzo-python
+
+# Add GIT so code can be pulled from GitHub
+RUN apk update
+RUN apk upgrade
+RUN apk add git
+
+# Now Clone the Repo
+RUN git clone https://github.com/crazy54/DockerTrials.git
+
+# CD to new dir of python code
+RUN cd DockerTrials
 
 # Run Some Commands!
 RUN pip3 install -r requrements.txt
@@ -18,4 +29,4 @@ EXPOSE 443
 EXPOSE 9092
 
 # Run the Following Command Once Launched
-CMD [ "python3", "/hanzo-python/dd-events.py" ]
+CMD [ "python3", "/hanzo-python/DockerTrials/dd-events.py" ]
