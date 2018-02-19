@@ -19,7 +19,7 @@ RUN apk add git
 RUN git clone https://github.com/crazy54/DockerTrials.git
 
 # CD to new dir of python code
-RUN cd DockerTrials
+#RUN cd DockerTrials
 
 # Run Some Commands!
 RUN pip3 install -r requrements.txt
