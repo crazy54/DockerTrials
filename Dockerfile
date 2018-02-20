@@ -21,4 +21,4 @@ EXPOSE 443
 EXPOSE 9092
 
 # Run the Following Command Once Launched
-CMD [ "python3", "/hanzo-python/dd-events.py" ]
+CMD python3 /hanzo-python/dd-events.py
