@@ -13,11 +13,6 @@ VOLUME /hanzo-python
 # Copy shit over to the docker container to be run
 COPY . /hanzo-python
 
-# Add GIT so code can be pulled from GitHub
-RUN apk update
-RUN apk upgrade
-RUN apk add htop
-
 # Run Some Commands!
 RUN pip3 install -r requrements.txt
 
