@@ -11,8 +11,8 @@ class DDAGGREGATOR(object):
     """This class is used to pull alerts from DataDog and push them into a Kafka topic.
     """
     def __init__(self):
-        self.options = {"api_key" : 'bf13f3e9b8f4a4487af8d023d154eb36', \
-                    'app_key':'be3c94fd4e997d49b7493c2b3e87c11c15cf84ec'}
+        self.options = {"api_key" : 'XXXXXXXXXXXX', \
+                    'app_key':'XXXXXXXXXXXXX'}
         initialize(**self.options)
 
     @staticmethod
